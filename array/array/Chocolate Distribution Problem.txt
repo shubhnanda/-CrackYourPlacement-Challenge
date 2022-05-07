@@ -1,0 +1,14 @@
+lass Solution{
+    public:
+    long long findMinDiff(vector<long long> a, long long n, long long m){
+    long long i=0;
+    long long j=0;
+    long long diff=INT_MAX;
+    sort(a.begin(),a.end());
+    for(j=i+m-1;j<n;j++){
+        diff=min(diff,(a[j]-a[i]));
+        i++;
+    }
+    
+    return diff;
+    }   
